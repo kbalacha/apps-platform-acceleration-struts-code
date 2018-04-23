@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Bean;
 
 import javax.servlet.Filter;
 
+import java.util.Arrays;
+
 import static java.util.Collections.singletonList;
 
 @SpringBootApplication
@@ -39,7 +41,13 @@ public class Application {
     private FilterRegistrationBean buildFilterRegistration(int order, Filter filter) {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(filter);
-        registration.setUrlPatterns(singletonList("/*"));
+        registration.setUrlPatterns(Arrays.asList(
+                "/decorators/layout.jsp",
+                "/findUserForm.jsp",
+                "/displayUser.jsp",
+                "/displayUsers.jsp",
+                "/listAllUsers.action"
+        ));
         registration.setOrder(order);
         return registration;
     }

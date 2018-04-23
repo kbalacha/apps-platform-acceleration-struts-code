@@ -20,10 +20,6 @@ package org.superbiz.struts;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import java.util.Properties;
-
 @Component
 public class AddUser {
 

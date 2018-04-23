@@ -35,6 +35,7 @@ public class FindUser {
         this.userService = userService;
     }
 
+
     public User getUser() {
         return user;
     }
